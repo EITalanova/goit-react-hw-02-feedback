@@ -1,4 +1,15 @@
+import React from 'react';
+import Feedback from './Feedback/Feedback';
+import { Statistics } from './Statistics/Statistics';
+
+
 export const App = () => {
+    state = {
+      good: 0,
+      neutral: 0,
+      bad: 0,
+    }
+  
   return (
     <div
       style={{
@@ -10,7 +21,8 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
+      <Feedback />
+      <Statistics good={this.state.good} neutral={this.state.good} bad={this.state.good} total={this.state.good} positivePercentage={this.state.good}/>
     </div>
   );
 };
